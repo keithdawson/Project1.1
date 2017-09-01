@@ -10,7 +10,7 @@ int main(int argc, char **argv) {
 		return 0;
 	}
 	int i, j;
-	string strArray[1000][
+	string strArray[1000][5];
 	//Opens file to read from
 	ifstream inFile(argv[1]);
 

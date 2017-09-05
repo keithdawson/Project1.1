@@ -13,7 +13,9 @@ int main(int argc, char **argv) {
 	string strArray[1000][5];
 	//Opens file to read from
 	ifstream inFile(argv[1]);
+	string word;
 
+	inFile >> word;
 
 
 

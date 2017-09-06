@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <iomanip>
 #include <fstream>
 
 using namespace std;
@@ -13,8 +14,8 @@ int main(int argc, char **argv) {
 	int fromLocation, toLocation;
 	int i, j, matchRow, nextRow=0, speed;
 	int dataArray[1000][5];
-	for (int m=0;m<=1000;m++){
-		for (int n=0;n<=5;n++)
+	for (int m=0;m<1000;m++){
+		for (int n=0;n<5;n++)
 			dataArray[m][n]=0;
 	}
 	string strArray[1000];
@@ -74,11 +75,18 @@ int main(int argc, char **argv) {
 		//This is the case for the third word/the speed in numbers
 
 		inFile >> speed;
-
 		dataArray[fromLocation][3] += speed;
 		dataArray[toLocation][4] += speed;
 	}
+	// Now for going through and printing
+	double d = 0.0;
+	for (int u=0;strArray[u]!="";u++){
+		if (dataArray[u][1] != 0 && dataArray[u][2] != 0){
+			cout << strArray[u] << ' ' << dataArray[u][3] << ' ' << dataArray[u][4] << ' ';
+			d=dataArray[u][3]/dataArray[u][4];
+			cout << setprecision(2) << d << endl;
+		}
 
-
+	}
 
 }

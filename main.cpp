@@ -19,12 +19,14 @@ int main(int argc, char **argv) {
 		for (int n=0;n<5;n++)
 			dataArray[m][n]=0;
 	}
-
+	int runCount =0;
 	string strArray[1000];
 	//Opens file to read from
 	ifstream inFile(argv[1]);
 	string word;
 	while (inFile >> word){
+		runCount += 1;
+		cout << runCount << endl;
 		//This is the case for the first word it hits, it puts this in the array
 		char c;
 		int k;

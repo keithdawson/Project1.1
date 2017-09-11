@@ -57,7 +57,7 @@ int main(int argc, char **argv) {
 		for(int i = 0; i < word.length(); i++) {
 			word[i] = toupper(word[i]);
 		}
-		for(i=0;i<=1000;i++){
+		for(i=0;i<1000;i++){
 			if (word == strArray[i]){
 				matchRow = i;
 				dataArray[i][2]+= 1;
